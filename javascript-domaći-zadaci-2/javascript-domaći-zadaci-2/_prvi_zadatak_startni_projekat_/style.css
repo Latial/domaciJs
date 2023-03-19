@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(120, 120, 120, 0.1);
+  height: 100vh;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.movie-card {
+  background-color: #fff;
+  width: 480px;
+  color: rgb(80, 80, 80);
+  /* 
+    prikazujemo crnu, providnu (0.3), senku iza kviza, i to:
+    0px horizontalno u odnosu na kviz kontejner
+    0px vertikalno u odnosu na kviz kontejner
+    20px zamućenost senke (veći broj - veća zamućenost)
+    4px raširenost senke (veći broj - veća raširenost)
+  */
+  box-shadow: 0px 0px 20px 4px rgba(100, 100, 100, 0.3);
+}
+
+/* 
+  slika je određene visine i 100% širine kontejnera u kojem se nalazi
+  (biće do samih ivica tog kontejnera)
+*/
+.card-img {
+  width: 100%;
+  height: 280px;
+  /* 
+    DOPUNITI 
+    preuzeti neku reprezentativnu sliku filma za koji se vrši odbrojavanje
+    i postaviti je (background-image)
+  */
+
+  background-size: cover;
+}
+
+.card-text {
+  padding: 10%;
+}
+
+.card-more {
+  margin: 20px 0px;
+
+}
+
+.trailer-btn {
+  background-color: #e6a665;
+  padding: 10px 20px;
+  color: rgb(32, 32, 32);
+  text-decoration: none;
+}
+
+.trailer-btn:hover {
+  color: rgb(32, 32, 32);
+  background-color: #e6a56594;
+}
+
+/*
+  U startu ne želimo da prikazujemo vreme, dok traje prikaz kružića za učitavanje (spinner)
+  pa tako postavljamo display na none. Jednom kada želimo da prikažemo vreme postavićemo
+  display na flex.
+*/
+.countdown {
+  /* svi elementi u okviru countdown div-a su "fleksibilni" */
+  display: flex;
+  /* ređamo fleksibilne elemente tako da budu u jednom redu */
+  flex-direction: row; /* podrazumevani način ređanja elemenata */
+  justify-content: center;
+
+  /* ako želimo, row-reverse će poređati elemente tako da imaju obrnuti redosled */
+  /* flex-direction: row-reverse; */
+  text-align: center;
+}
+
+.time {
+  margin: 15px;
+}
+
+.time h2 {
+  margin: 0 0 5px;
+}
